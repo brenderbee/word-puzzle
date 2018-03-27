@@ -23,8 +23,10 @@ $(document).ready(function() {
       }
     }
 
-    var arrayToString = newLetters.toString();
+    var arrayToString = newLetters.join("");
 
-   alert(arrayToString);
+
+    $(".result").show();
+    $("#result").text(arrayToString);
   });
 });
