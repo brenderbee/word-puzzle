@@ -5,16 +5,26 @@ $(document).ready(function() {
 
     var inputSentence = $("#sentence").val();
     // var vowels = ["a", "e", "i", "o", "u" ];
+    var letters = inputSentence.split("");
+    var newLetters = [];
 
 
+    for (var index = 0; index < letters.length; index++) {
+      if (letters[index] === "a" ||
+      letters[index] === "e" ||
+      letters[index] === "i" ||
+      letters[index] === "o" ||
+      letters[index] === "u") {
 
-    for (var index = 0; index <= inputSentence.length - 1; index++) {
-      alert(inputSentence.charAt(index));
+      newLetters.push("-");
+
+      } else {
+      newLetters.push(letters[index]);
+      }
     }
 
+    var arrayToString = newLetters.toString();
 
-
-    $(".result").show();
-    $("#result").text(inputSentence);
+   alert(arrayToString);
   });
 });
